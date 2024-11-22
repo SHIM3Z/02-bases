@@ -14,4 +14,6 @@ export class ListComponent {
     power: 10,
   }];
 
+
+
 }
