@@ -1,0 +1,25 @@
+<h3>Listado de Héroes</h3>
+
+<div *ngIf="deleteHero; else nothingWasDeleted">
+  <h3>
+    Héroe borrado: <small class="text-danger">{{ deleteHero }}</small>
+  </h3>
+</div>
+<!-- este es el uso de if else de angular, podemos usarlo para mostrar o no segun se cumplan las condiciones
+despues del else podemos poner una variable la cual debemos poner en el ng template para que
+este se pueda ver o no cuando se cumpla la condicion -->
+<ng-template #nothingWasDeleted>
+  <h3>No ha borrado nada.</h3>
+</ng-template>
+
+<button
+  *ngIf="heroNames.length > 0"
+  (click)="removeLastHero()"
+  class="btn btn-outline-danger"
+>
+  Borrar ultimo héroe
+</button>
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let name of heroNames" class="list-group-item">{{ name }}</li>
+</ul>
