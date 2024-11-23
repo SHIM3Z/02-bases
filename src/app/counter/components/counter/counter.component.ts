@@ -16,10 +16,10 @@ export class CounterComponent {
 
   constructor() { }
   increment(value: number): void {
-    this.counter+=value;
+    this.counter += value;
   }
 
-  resetCounter(){
+  resetCounter() {
     this.counter = 10;
   }
 
